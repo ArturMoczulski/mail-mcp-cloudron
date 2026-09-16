@@ -1,0 +1,47 @@
+user cloudron;
+worker_processes 1;
+pid /run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    access_log /dev/stdout;
+    error_log /dev/stderr info;
+
+    map $http_authorization $mcp_authorized {
+        default 0;
+        "Bearer __MCP_BEARER_TOKEN__" 1;
+    }
+
+    server {
+        listen 3000;
+        server_name _;
+
+        location = /healthz {
+            default_type application/json;
+            return 200 '{"status":"ok"}';
+        }
+
+        location /mcp {
+            if ($mcp_authorized = 0) {
+                return 401;
+            }
+
+            proxy_http_version 1.1;
+            proxy_buffering off;
+            proxy_request_buffering off;
+            proxy_read_timeout 3600s;
+            proxy_send_timeout 3600s;
+            proxy_set_header Host 127.0.0.1:9557;
+            proxy_set_header Origin "";
+            proxy_set_header Connection "";
+            proxy_pass http://127.0.0.1:9557;
+        }
+
+        location / {
+            return 404;
+        }
+    }
+}

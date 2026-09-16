@@ -1,0 +1,21 @@
+{
+  "id": "io.elev8d.mailmcp",
+  "version": "0.1.0",
+  "upstreamVersion": "1.6.2",
+  "minBoxVersion": "8.0.0",
+  "title": "Mail MCP",
+  "description": "file://DESCRIPTION.md",
+  "tagline": "Authenticated MCP access to a private IMAP/SMTP mailbox",
+  "website": "https://github.com/Wh1isper/mcp-email-server",
+  "icon": "file://icon.svg",
+  "changelog": "file://CHANGELOG.md",
+  "postInstallMessage": "file://POSTINSTALL.md",
+  "mediaLinks": ["https://github.com/Wh1isper/mcp-email-server"],
+  "healthCheckPath": "/healthz",
+  "httpPort": 3000,
+  "tags": ["email", "mcp", "ai"],
+  "addons": {
+    "localstorage": {}
+  },
+  "manifestVersion": 2
+}

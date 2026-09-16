@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Mail MCP">
+  <rect width="256" height="256" rx="48" fill="#182230"/>
+  <path d="M44 72h168a16 16 0 0 1 16 16v88a16 16 0 0 1-16 16H44a16 16 0 0 1-16-16V88a16 16 0 0 1 16-16Z" fill="#e8f0ff"/>
+  <path d="m38 85 90 66 90-66" fill="none" stroke="#3976e8" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="194" cy="188" r="38" fill="#27b36a" stroke="#182230" stroke-width="10"/>
+  <path d="M177 188h34M194 171v34" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+</svg>
