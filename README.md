@@ -2,7 +2,7 @@
 
 This package runs `Wh1isper/mcp-email-server` behind an nginx bearer-token gateway.
 
-The `main` branch is built for Cloudron's Linux/AMD64 environment and published to `ghcr.io/arturmoczulski/mail-mcp-cloudron:latest` by GitHub Actions.
+Install directly from this package directory with `cloudron install`. When no registry build is configured, the Cloudron CLI uploads the source archive and builds a private `local/io.elev8d.mailmcp:...` image on the Cloudron server.
 
 ## Required environment
 
