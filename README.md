@@ -2,6 +2,8 @@
 
 This package runs `Wh1isper/mcp-email-server` behind an nginx bearer-token gateway.
 
+The `main` branch is built for Cloudron's Linux/AMD64 environment and published to `ghcr.io/arturmoczulski/mail-mcp-cloudron:latest` by GitHub Actions.
+
 ## Required environment
 
 - `MCP_BEARER_TOKEN`: exactly 64 hexadecimal characters.
