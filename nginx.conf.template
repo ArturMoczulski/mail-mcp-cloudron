@@ -10,6 +10,11 @@ http {
     access_log /dev/stdout;
     error_log /dev/stderr info;
     map_hash_bucket_size 128;
+    client_body_temp_path /run/nginx/body;
+    proxy_temp_path /run/nginx/proxy;
+    fastcgi_temp_path /run/nginx/fastcgi;
+    uwsgi_temp_path /run/nginx/uwsgi;
+    scgi_temp_path /run/nginx/scgi;
 
     map $http_authorization $mcp_authorized {
         default 0;

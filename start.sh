@@ -6,7 +6,7 @@ if [[ ! "${MCP_BEARER_TOKEN:-}" =~ ^[A-Fa-f0-9]{64}$ ]]; then
     exit 1
 fi
 
-mkdir -p /app/data /run/nginx
+mkdir -p /app/data /run/nginx/{body,proxy,fastcgi,uwsgi,scgi}
 chown -R cloudron:cloudron /app/data /run/nginx
 
 sed "s/__MCP_BEARER_TOKEN__/${MCP_BEARER_TOKEN}/g" \

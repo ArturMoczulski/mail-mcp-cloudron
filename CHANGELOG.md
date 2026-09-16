@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Store nginx temporary files in Cloudron's writable runtime directory.
+
 ## 0.1.1
 
 - Fix nginx startup for long bearer tokens.
