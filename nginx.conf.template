@@ -9,6 +9,7 @@ events {
 http {
     access_log /dev/stdout;
     error_log /dev/stderr info;
+    map_hash_bucket_size 128;
 
     map $http_authorization $mcp_authorized {
         default 0;
